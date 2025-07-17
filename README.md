@@ -1,40 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Todo App – Prueba Técnica Next.js + TypeScript
 
-## Getting Started
+Este proyecto es el resultado de una prueba técnica para el rol de **Programador Junior**. Consiste en una aplicación web tipo **To-Do List**.
 
-First, run the development server:
+## Tecnologías utilizadas
 
-```bash
+- **Next.js** 
+- **TypeScript** 
+- **Zustand** 
+- **Tailwind CSS** 
+- **Prisma ORM**
+- **SQLite**
+
+## Funcionalidades
+
+- Crear tareas
+- Ver lista de tareas
+- Marcar tareas como completadas
+- Eliminar tareas
+- Ordenar tareas (pendientes arriba, completadas abajo)
+- Estadísticas de tareas totales y completadas
+- Barra de progreso visual
+- Persistencia con base de datos usando Prisma
+- Estilos modernos y responsive con Tailwind
+
+## Estructura del proyecto
+
+├── prisma/
+│ └── schema.prisma # Modelo de base de datos (Prisma + SQLite)
+├── src/
+│ ├── components/
+│ │ └── TaskItem.tsx # Componente de tarea individual
+│ ├── lib/
+│ │ ├── prisma.ts # Cliente de Prisma
+│ │ └── db.ts # Funciones de acceso a la base de datos
+│ ├── pages/
+│ │ ├── api/
+│ │ │ └── tasks/ # Endpoints REST (GET, POST, PATCH, DELETE)
+│ │ ├── _app.tsx # Configuración global de la app
+│ │ ├── _document.tsx # Documento HTML base
+│ │ └── index.tsx # Página principal con formulario y lista
+│ ├── store/
+│ │ └── useTaskStore.ts # Estado global usando Zustand
+│ ├── types/
+│ │ └── task.ts # Tipado de la entidad Task
+│ └── styles/
+│ └── globals.css # Estilos globales y utilitarios
+
+## Instalación y ejecución
+
+1. Clona el repositorio:
+
+git clone https://github.com/emmanuellopezsalda/Todo-List.git
+cd todo-app
+
+2. Instala las dependencias:
+
+npm install
+
+3. Prepara la base de datos:
+
+npx prisma db push
+
+4. Inicia el servidor de desarrollo:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+La app estará disponible en: http://localhost:3000
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+👨‍💻 Autor
+Emmanuel López Saldarriaga
+GitHub: https://github.com/emmanuellopezsalda
