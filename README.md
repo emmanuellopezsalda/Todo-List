@@ -25,26 +25,28 @@ Este proyecto es el resultado de una prueba técnica para el rol de **Programado
 
 ## Estructura del proyecto
 
+```text
 ├── prisma/
-│ └── schema.prisma # Modelo de base de datos (Prisma + SQLite)
+│   └── schema.prisma          # Modelo de base de datos (Prisma + SQLite)
 ├── src/
-│ ├── components/
-│ │ └── TaskItem.tsx # Componente de tarea individual
-│ ├── lib/
-│ │ ├── prisma.ts # Cliente de Prisma
-│ │ └── db.ts # Funciones de acceso a la base de datos
-│ ├── pages/
-│ │ ├── api/
-│ │ │ └── tasks/ # Endpoints REST (GET, POST, PATCH, DELETE)
-│ │ ├── _app.tsx # Configuración global de la app
-│ │ ├── _document.tsx # Documento HTML base
-│ │ └── index.tsx # Página principal con formulario y lista
-│ ├── store/
-│ │ └── useTaskStore.ts # Estado global usando Zustand
-│ ├── types/
-│ │ └── task.ts # Tipado de la entidad Task
-│ └── styles/
-│ └── globals.css # Estilos globales y utilitarios
+│   ├── components/
+│   │   └── TaskItem.tsx       # Componente de tarea individual
+│   ├── lib/
+│   │   ├── prisma.ts          # Cliente de Prisma
+│   │   └── db.ts              # Funciones de acceso a la base de datos
+│   ├── pages/
+│   │   ├── api/
+│   │   │   └── tasks/         # Endpoints REST (GET, POST, PATCH, DELETE)
+│   │   ├── _app.tsx           # Configuración global de la app
+│   │   ├── _document.tsx      # Documento HTML base
+│   │   └── index.tsx          # Página principal con formulario y lista
+│   ├── store/
+│   │   └── useTaskStore.ts    # Estado global usando Zustand
+│   ├── types/
+│   │   └── task.ts            # Tipado de la entidad Task
+│   └── styles/
+│       └── globals.css        # Estilos globales y utilitarios
+```
 
 ## Instalación y ejecución
 
